@@ -1,11 +1,18 @@
 
       {
+        document.getElementById('good-morning').muted = true;
+        document.getElementById('good-early').muted = true;
+        // document.getElementById('good-evening').muted = true;
+        document.getElementById('good-noon').muted = true;
+        // document.getElementById('good-aftern').muted = true;
+        document.getElementById('good-morning').muted = true;
         var greeting;
         var time = new Date().getHours();
         if(time >= 0&& time< 5)
         {
           greeting="Dậy sớm thế?";
           console.log("Dậy sớm thế?");
+
           document.getElementById('good-early').play();
           document.getElementById('good-early').volume = 0.2;
 
@@ -13,8 +20,10 @@
         else if (time >= 6 && time <10) {
           greeting = "Chào buổi sáng,";
           console.log("Sáng");
+          document.getElementById('good-morning').muted = false;
           document.getElementById('good-morning').play();
           document.getElementById('good-morning').volume = 0.2;
+          
         }
         else if (time >= 11 && time < 12)
         {
